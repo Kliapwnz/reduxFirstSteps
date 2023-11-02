@@ -1,4 +1,6 @@
-export const tasksReducer = (state: any, action: any) => {
+import {TaskType} from "../Todolist";
+
+export const tasksReducer = (state: TaskType[], action: any) => {
     switch (action.type) {
         case "XXX": {
             return state

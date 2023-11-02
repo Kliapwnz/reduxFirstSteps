@@ -18,7 +18,7 @@ function App() {
 
 
     function removeTask(id: string) {
-    dispatchTasks(removeTaskAC())
+    dispatchTasks(removeTaskAC(id))
     }
 
     function addTask(title: string) {

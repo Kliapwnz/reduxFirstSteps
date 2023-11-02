@@ -5,6 +5,13 @@ export const tasksReducer = (state: TaskType[], action: any) => {
         case "XXX": {
             return state
         }
-        default: return state
+        default:
+            return state
+    }
+}
+
+const removeTaskAC = () => {
+    return {
+
     }
 }

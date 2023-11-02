@@ -3,7 +3,7 @@ import {TaskType} from "../Todolist";
 export const tasksReducer = (state: TaskType[], action: TsarType) => {
     switch (action.type) {
         case "REMOVE-TASK": {
-            return state
+            return state.filter(el=>el.id !== action.payload.id)
         }
         default:
             return state

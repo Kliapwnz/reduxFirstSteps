@@ -15,6 +15,7 @@ function App() {
         { id: v1(), title: "GraphQL", isDone: false },
     ]);
 
+
     function removeTask(id: string) {
         let filteredTasks = tasks.filter(t => t.id != id);
         setTasks(filteredTasks);

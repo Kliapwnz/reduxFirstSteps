@@ -10,10 +10,10 @@ export const tasksReducer = (state: TaskType[], action: any) => {
     }
 }
 
-type RemoveTaskACType=ReturnType<typeof removeTaskAC>
+type RemoveTaskACType = ReturnType<typeof removeTaskAC>
 
 const removeTaskAC = () => {
     return {
-        type:"REMOVE-TASK"
-    }
+        type: "REMOVE-TASK"
+    } as const
 }

@@ -16,8 +16,8 @@ export const todolistsReducer = (state: TodolistType[], action: TypeTodolistRedu
         }
     }
 }
-type TypeTodolistReducer = TypeRemoveTL | TypeAddTL
-type TypeRemoveTL = ReturnType<typeof removeTodolistAC>
+type TypeTodolistReducer = RemoveTLType | AddTLType
+type RemoveTLType = ReturnType<typeof removeTodolistAC>
 
 export const removeTodolistAC = (id: string) => {
     return {
@@ -28,7 +28,7 @@ export const removeTodolistAC = (id: string) => {
     } as const
 }
 
-type TypeAddTL = ReturnType<typeof addTodolistAC>
+type AddTLType = ReturnType<typeof addTodolistAC>
 
 export const addTodolistAC = (title: string) => {
     return {

@@ -1,4 +1,6 @@
-export const todolistsReducer=(state:any,action:any)=>{
+import {TodolistType} from "../App";
+
+export const todolistsReducer=(state:TodolistType[],action:any)=>{
     switch (action.type) {
         case "XXX":{
             return

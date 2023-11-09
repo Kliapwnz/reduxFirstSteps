@@ -43,6 +43,9 @@ export function Todolist(props: PropsType) {
     const onAllClickHandler = () => props.changeFilter("all", props.id);
     const onActiveClickHandler = () => props.changeFilter("active", props.id);
     const onCompletedClickHandler = () => props.changeFilter("completed", props.id);
+    const changeStatusHandler = (tId: string, checked: boolean) => {
+        props.changeTaskStatus(tId, checked, props.id)
+    }
 
     return <div>
         <h3><EditableSpan value={props.title} onChange={changeTodolistTitle}/>
@@ -61,7 +64,7 @@ export function Todolist(props: PropsType) {
 
 
                     return <div key={t.id} className={t.isDone ? "is-done" : ""}>
-                        <SuperCheckBox isDone={t.isDone} callBack={}/>
+                        <SuperCheckBox isDone={t.isDone} callBack={(checked) => changeStatusHandler(t.id, checked)}/>
 
                         <EditableSpan value={t.title} onChange={onTitleChangeHandler}/>
                         <IconButton onClick={onClickHandler}>
